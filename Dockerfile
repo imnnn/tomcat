@@ -1,6 +1,7 @@
 FROM tomcat:8.5.40-jre8
 
 COPY sources.list /etc/apt/sources.list
+COPY server.xml /usr/local/tomcat/conf/server.xml
 
 RUN apt-get update && \
     #apt-get install apt-utils -y --allow-unauthenticated --fix-missing && \
