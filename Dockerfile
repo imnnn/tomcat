@@ -8,4 +8,8 @@ RUN apt-get update && \
     apt-get install vim -y --allow-unauthenticated --fix-missing && \
     apt-get install tree -y --allow-unauthenticated --fix-missing
 
+#correct data and time.
+RUN echo "Etc/UTC+8" > /etc/timezone && \
+    ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 #CMD ["catalina.sh","run"]
